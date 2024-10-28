@@ -712,43 +712,43 @@ header nav ul li a:hover {
 
     /* Profile Picture */
     .profile-pic {
-        width: 150px;
-        height: 150px;
+        width: 150px;         
+        height: 150px;        
         position: relative;
         left: auto;
         top: auto;
-        margin: 0 auto 25px;
-        border: 3px solid #ffffff;
+        margin: 0 auto 25px; 
+        border: 3px solid #ffffff;  
     }
 
-    /* Name (by Zlatko Zurkic) - ⭐ MOVED THIS BEFORE TITLE */
-    .profile-name {
-        position: relative;
-        width: 100%;
-        text-align: center;
-        font-size: 1.4rem;
-        margin: 0 0 15px 0;    /* ⭐ Adjusted margin */
-        color: #ffffff;
-        left: auto;
-        top: auto;
-        font-style: italic;
-    }
-
-    /* Main Title (CODEFORM) - ⭐ MOVED AFTER NAME */
+    /* Main Title (CODEFORM) */
     header h1 {
         font-size: 2.5rem;
-        margin: 0 0 30px 0;   /* ⭐ Adjusted margin */
+        margin: 0 0 15px 0;   
         padding: 0;
         width: 100%;
         text-align: center;
         color: #ffffff;
     }
 
+    /* Name (by Zlatko Zurkic) */
+    .profile-name {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-size: 1.4rem;
+        margin: 0 0 30px 0;    
+        color: #ffffff;
+        left: auto;
+        top: auto;
+        font-style: italic;    
+    }
+
     /* Subtitle (Web Developer...) */
     header p {
         width: 100%;
         text-align: center;
-        margin: 0 0 40px;
+        margin: 0 0 40px;      
         padding: 0 20px;
         font-size: 1.2rem;
         color: #ffffff;
@@ -810,8 +810,8 @@ header nav ul li a:hover {
 /* Small devices */
 @media (max-width: 480px) {
     .profile-pic {
-        width: 130px;
-        height: 130px;
+        width: 130px;    
+        height: 130px;   
     }
 
     header h1 {
@@ -819,7 +819,7 @@ header nav ul li a:hover {
     }
 
     .profile-name {
-        font-size: 1.3rem;
+        font-size: 1.3rem;  
     }
 
     header p {
