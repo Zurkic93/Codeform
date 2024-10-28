@@ -1,54 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="description" content="Zlatko Zurkic - Front-End Web Developer specializing in HTML, CSS, and JavaScript. Explore my portfolio to see my projects and skills. Available for freelance work.">
     <meta name="keywords" content="Zlatko Zurkic, web developer, front-end, HTML, CSS, JavaScript, portfolio, freelance">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Codeform | Web Developer</title>
+    <meta property="og:title" content="Zlatko Zurkic | Front-End Web Developer">
+    <meta property="og:description" content="Explore Zlatko's portfolio to see a wide range of web development projects and skills, specializing in HTML, CSS, JavaScript, and more.">
+    <meta property="og:image" content="profile.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+    <title>Zlatko Zurkic | Web Developer</title>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- External CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome for skill icons -->
+    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
 
+   <!-- Dark Mode Toggle Button -->
+<button id="theme-toggle" aria-label="Toggle dark and light mode">
+    <i class="fas fa-moon"></i>
+    <span id="theme-text">Dark Mode</span>
+</button>
+
     <!-- Header Section -->
     <header>
         <div class="container header-content">
-            <img src="profile.jpeg" alt="Zlatko Zurkic's Profile Picture" class="profile-pic">
-            <p class="profile-name">Zlatko Zurkic</p>
+            <img src="profile.jpeg" alt="Portrait of Zlatko Zurkic, Front-End Web Developer" class="profile-pic">
+            <p class="profile-name">Z.ZURKIC</p>
             <h1>Codeform</h1>
             <p>Web Developer | HTML | CSS | JavaScript</p>
             <nav>
                 <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" aria-label="About section">About</a></li>
+                    <li><a href="#skills" aria-label="Skills section">Skills</a></li>
+<li><a href="#reviews" aria-label="Reviews section">Reviews</a></li> <!-- New Reviews button -->
+                    <li><a href="#projects" aria-label="Projects section">Projects</a></li>
+                    <li><a href="#contact" aria-label="Contact section">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="container">
+    <section id="about" class="container" data-aos="fade-up">
         <h2>About Me</h2>
-        <p>Hello, I’m Zlatko Zurkic, a dedicated Front-End Web Developer with over 4 years of experience.
+        <div class="text-container">
+        <p>Hello! I’m Zlatko Zurkic, a passionate and detail-oriented Full-Stack Web Developer with over 4 years of hands-on experience building dynamic, user-friendly websites and web applications.</p>
+        <p>My expertise spans both front-end and back-end development, allowing me to craft seamless, responsive experiences for users while ensuring that the underlying code is efficient, maintainable, and scalable for future growth.</p>
 
-I specialize in creating responsive and user-friendly websites that not only look great but perform smoothly across all devices. My approach is rooted in a strong understanding of modern web standards, ensuring that every project I work on is efficient, maintainable, and future-proof.
-
-Over the years, I’ve had the opportunity to work with a wide range of clients, helping them transform their ideas into functional and visually appealing digital experiences—some of which you can see in my project section below. I pride myself on clear communication, attention to detail, and delivering solutions that meet both client needs and user expectations.
-
-Whether you need a fresh, responsive website, a custom web application, or ongoing development support, I’m here to bring your vision to life with professionalism and reliability.</p>
+            <p>I specialize in creating custom solutions that go beyond templates. Whether it's a fully dynamic web app using React.js on the front-end, Node.js on the back-end, or a powerful content management system like WordPress, I take pride in bringing ideas to life with clean, well-structured code. My development approach is rooted in industry best practices, ensuring every project I touch is fast, secure, and ready for future challenges.
+            
+            Over the years, I’ve had the opportunity to collaborate with a diverse range of clients—from entrepreneurs launching their first product to established businesses looking to improve their online presence. My clients value my ability to understand their vision, break it down into actionable steps, and deliver a product that doesn’t just work, but truly shines. I love helping people turn their ideas into beautiful, functional digital experiences that engage users and grow businesses.</p>
+            
+            <p>When we work together, you can expect clear communication, attention to detail, and a relentless focus on delivering exactly what you need—whether it's a responsive website that looks great on any device, a web application that handles thousands of users seamlessly, or ongoing support to ensure your project continues to perform at its best.
+            
+            If you’re looking for someone who is as invested in your project’s success as you are, I’m your guy. I’m here to solve problems, build custom solutions, and ensure that your website or application is ready to take on the future.</p>
+            
+            <p>Let’s create something amazing together!</p>
+        </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2 class="skills-title">My Skills Include</h2>
+    <section id="skills" class="container" data-aos="fade-right">
+        <h2 class="skills-title">My Skills</h2>
         <div class="skill-container">
+    
+            <!-- Front-End Skills -->
             <div class="skill">
                 <p class="skill-label"><i class="fas fa-code"></i> HTML5</p>
                 <div class="skill-bar" data-width="90">
@@ -56,20 +79,20 @@ Whether you need a fresh, responsive website, a custom web application, or ongoi
                 </div>
             </div>
             <div class="skill">
-                <p class="skill-label"><i class="fas fa-paint-brush"></i> CSS3</p>
+                <p class="skill-label"><i class="fas fa-paint-brush"></i> CSS3 / SASS</p>
                 <div class="skill-bar" data-width="85">
                     <div class="skill-bar-fill"></div>
                 </div>
             </div>
             <div class="skill">
-                <p class="skill-label"><i class="fas fa-laptop-code"></i> JavaScript</p>
-                <div class="skill-bar" data-width="80">
+                <p class="skill-label"><i class="fas fa-laptop-code"></i> JavaScript (ES6+)</p>
+                <div class="skill-bar" data-width="85">
                     <div class="skill-bar-fill"></div>
                 </div>
             </div>
             <div class="skill">
-                <p class="skill-label"><i class="fas fa-code-branch"></i> Version Control (Git)</p>
-                <div class="skill-bar" data-width="75">
+                <p class="skill-label"><i class="fab fa-react"></i> React.js (with Redux)</p>
+                <div class="skill-bar" data-width="85">
                     <div class="skill-bar-fill"></div>
                 </div>
             </div>
@@ -79,15 +102,31 @@ Whether you need a fresh, responsive website, a custom web application, or ongoi
                     <div class="skill-bar-fill"></div>
                 </div>
             </div>
+    
+            <!-- Back-End Skills -->
             <div class="skill">
-                <p class="skill-label"><i class="fab fa-react"></i> React.js</p>
-                <div class="skill-bar" data-width="85">
+                <p class="skill-label"><i class="fas fa-server"></i> Node.js / Express.js</p>
+                <div class="skill-bar" data-width="80">
                     <div class="skill-bar-fill"></div>
                 </div>
             </div>
             <div class="skill">
-                <p class="skill-label"><i class="fas fa-mobile-alt"></i> Progressive Web Applications</p>
-                <div class="skill-bar" data-width="85">
+                <p class="skill-label"><i class="fas fa-database"></i> MongoDB / MySQL</p>
+                <div class="skill-bar" data-width="75">
+                    <div class="skill-bar-fill"></div>
+                </div>
+            </div>
+    
+            <!-- Other Skills -->
+            <div class="skill">
+                <p class="skill-label"><i class="fas fa-plug"></i> API Integration</p>
+                <div class="skill-bar" data-width="80">
+                    <div class="skill-bar-fill"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <p class="skill-label"><i class="fas fa-code-branch"></i> Version Control (Git/GitHub)</p>
+                <div class="skill-bar" data-width="75">
                     <div class="skill-bar-fill"></div>
                 </div>
             </div>
@@ -98,45 +137,139 @@ Whether you need a fresh, responsive website, a custom web application, or ongoi
                 </div>
             </div>
             <div class="skill">
-                <p class="skill-label"><i class="fas fa-plug"></i> API Integration</p>
-                <div class="skill-bar" data-width="75">
+                <p class="skill-label"><i class="fas fa-mobile-alt"></i> Progressive Web Applications (PWAs)</p>
+                <div class="skill-bar" data-width="80">
                     <div class="skill-bar-fill"></div>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="project">
+   <section id="projects" class="container" data-aos="fade-up">
+    <h2>Portfolio Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
             <h3>Responsive Portfolio Website</h3>
             <p>Developed a responsive, fully accessible portfolio website using HTML5, CSS3, and JavaScript, implementing Flexbox and Grid layouts.</p>
-            <a href="#" aria-label="View Responsive Portfolio Project">View Project</a>
+            <a href="projects/project-1/index.html" class="btn" aria-label="View Responsive Portfolio Project">View Project</a>
         </div>
-        <div class="project">
+        <div class="project-card">
             <h3>Interactive To-Do App</h3>
             <p>Created an interactive to-do list web app with JavaScript DOM manipulation, featuring task creation, filtering, and local storage integration.</p>
-            <a href="#" aria-label="View Interactive To-Do App Project">View Project</a>
+            <a href="#" class="btn" aria-label="View Interactive To-Do App Project">View Project</a>
         </div>
-        <div class="project">
+        <div class="project-card">
             <h3>E-commerce Product Page</h3>
             <p>Developed an e-commerce product page with advanced CSS animations, JavaScript product filtering, and responsive design principles.</p>
-            <a href="#" aria-label="View E-commerce Product Page Project">View Project</a>
+            <a href="#" class="btn" aria-label="View E-commerce Product Page Project">View Project</a>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Reviews Section -->
+<section id="reviews" class="container">
+    <h2>Reviews</h2>
+    <div class="reviews-container">
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Doe" class="review-photo">
+            <p class="review-message">"Zlatko did an amazing job on our website redesign. It looks stunning and is incredibly fast!"</p>
+            <p class="review-author">- John Doe</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jane Smith" class="review-photo">
+            <p class="review-message">"Delivered the project ahead of schedule with outstanding quality. Highly recommended!"</p>
+            <p class="review-author">- Jane Smith</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="David Brown" class="review-photo">
+            <p class="review-message">"Great communication throughout the project. The final product exceeded our expectations."</p>
+            <p class="review-author">- David Brown</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Maria Garcia" class="review-photo">
+            <p class="review-message">"Zlatko's coding skills are top-notch. He turned our vision into reality perfectly."</p>
+            <p class="review-author">- Maria Garcia</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/9.jpg" alt="James Wilson" class="review-photo">
+            <p class="review-message">"Quick, efficient, and delivers quality work. Couldn't ask for more."</p>
+            <p class="review-author">- James Wilson</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Linda Martinez" class="review-photo">
+            <p class="review-message">"Our website's user experience has drastically improved thanks to Zlatko's design."</p>
+            <p class="review-author">- Linda Martinez</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/43.jpg" alt="Richard Lee" class="review-photo">
+            <p class="review-message">"Outstanding work and a pleasure to work with. Will definitely hire again."</p>
+            <p class="review-author">- Richard Lee</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="Sarah Clark" class="review-photo">
+            <p class="review-message">"Helped us launch our new app on time and with fantastic performance."</p>
+            <p class="review-author">- Sarah Clark</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/men/28.jpg" alt="Brian Walker" class="review-photo">
+            <p class="review-message">"Professional, timely, and top-quality work. Couldn't recommend more."</p>
+            <p class="review-author">- Brian Walker</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <div class="review-card">
+            <img src="https://randomuser.me/api/portraits/women/36.jpg" alt="Nancy Allen" class="review-photo">
+            <p class="review-message">"The best developer we've worked with. Zlatko brings ideas to life beautifully."</p>
+            <p class="review-author">- Nancy Allen</p>
+            <p class="review-rating">★★★★★</p>
+        </div>
+        <!-- Add more review cards with photos here if needed -->
+    </div>
+</section>
 
     <!-- Contact Section -->
-    <section id="contact" class="container">
+    <section id="contact" class="container" data-aos="fade-up">
         <h2>Contact</h2>
         <p>I'm currently available for freelance work. If you'd like to collaborate or have any inquiries, feel free to get in touch!</p>
-        <a href="mailto:example@example.com" aria-label="Get in touch with Zlatko Zurkic">Get in Touch</a>
+        <!-- Updated "Get in Touch" Button -->
+<button id="get-in-touch" class="nav-button" aria-label="Get in touch with Zlatko Zurkic">Get in Touch</button>
+
     </section>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Zlatko Zurkic. All Rights Reserved.</p>
     </footer>
+
+    <!-- Script for Dark Mode and Skill Bar Interactivity -->
+    <script src="scripts.js"></script>
+<!-- Back to Top Button -->
+<div id="back-to-top" aria-label="Back to top">↑</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000, // Animation duration in milliseconds
+        once: true, // Animation occurs only once
+    });
+</script>
+
+<!-- Popup Modal for Contact Email -->
+<div id="email-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <p>Contact me at: <a href="mailto:psstudio1993@gmail.com">psstudio1993@gmail.com</a></p>
+    </div>
+</div>
 
 </body>
 </html>
