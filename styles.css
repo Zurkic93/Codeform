@@ -700,40 +700,51 @@ header nav ul li a:hover {
     text-align: left; /* Keep text aligned left for readability */
 }
 @media (max-width: 768px) {
-    /* Header Content Layout - This is new */
+    /* Header Content Layout */
     .header-content {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding-top: 140px;
+        padding-top: 20px;
         text-align: center;
     }
 
-    /* Profile Picture - New positioning approach */
+    /* Profile Picture */
     .profile-pic {
         position: relative;
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         left: auto;
         top: auto;
         margin: 0 auto 15px auto;
     }
 
-    /* Profile Name - New positioning approach */
+    /* Main Title (CODEFORM) */
+    header h1 {
+        font-size: 2.2rem;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    /* Name under title */
     .profile-name {
         position: relative;
         top: auto;
         left: auto;
         width: 100%;
         text-align: center;
-        margin-bottom: 20px;
-        font-size: 1.2rem;
+        margin: 10px 0 20px 0;
+        font-size: 1.5rem;
+        color: #ffffff;
     }
 
-    /* Navigation Menu - New width and padding */
+    /* Navigation Menu */
     header nav ul {
-        width: 100%;
-        padding: 0 20px;
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+        padding: 0;
+        gap: 15px;
     }
 
     header nav ul li {
@@ -743,20 +754,76 @@ header nav ul li a:hover {
     header nav ul li a {
         display: block;
         width: 100%;
+        padding: 12px 20px;
+        margin: 5px 0;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.9);
     }
 
-    /* Projects Grid - New padding */
-    .projects-grid {
+    /* Subtitle (Web Developer | HTML...) */
+    header p {
+        font-size: 1rem;
+        margin: 10px 0 25px 0;
         padding: 0 15px;
+        color: #ffffff;
+    }
+
+    /* Skills Section */
+    .skill-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .skill {
+        margin-bottom: 20px;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .project-card {
+        margin-bottom: 15px;
+    }
+
+    /* Reviews Section */
+    .reviews-container {
+        padding: 0 15px;
+    }
+
+    .review-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* Contact Section */
+    #contact {
+        padding: 20px 15px;
     }
 }
 
 @media (max-width: 480px) {
     .header-content {
-        padding-top: 100px;
+        padding-top: 15px;
     }
 
-    /* Only new, specific adjustments */
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .profile-name {
+        font-size: 1.3rem;
+    }
+
+    header nav ul li a {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+
     .skill-container {
         padding: 0 10px;
     }
@@ -772,5 +839,19 @@ header nav ul li a:hover {
     #about .text-container {
         padding: 0 15px;
         font-size: 0.95rem;
+    }
+}
+
+/* Ensure dark mode works properly on mobile */
+@media (max-width: 768px) {
+    body.dark-mode .header-content,
+    body.dark-mode .profile-name,
+    body.dark-mode header nav ul li a {
+        color: #f4f6f7;
+    }
+
+    body.dark-mode header nav ul li a {
+        background-color: #34495e;
+        color: #f4f6f7;
     }
 }
