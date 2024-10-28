@@ -700,7 +700,7 @@ header nav ul li a:hover {
     text-align: left; /* Keep text aligned left for readability */
 }
 @media (max-width: 768px) {
-    /* Header Content Layout */
+    /* Fixed header layout */
     .header-content {
         display: flex;
         flex-direction: column;
@@ -709,42 +709,41 @@ header nav ul li a:hover {
         text-align: center;
     }
 
-    /* Profile Picture */
+    /* Fixed profile image */
     .profile-pic {
         position: relative;
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
+        margin: 0 0 10px 0;
         left: auto;
         top: auto;
-        margin: 0 auto 15px auto;
     }
 
-    /* Main Title (CODEFORM) */
+    /* Title adjustments */
     header h1 {
         font-size: 2.2rem;
-        margin-top: 15px;
-        margin-bottom: 5px;
+        margin: 15px 0 10px 0;
+        padding: 0;
     }
 
-    /* Name under title */
+    /* Name positioning */
     .profile-name {
         position: relative;
-        top: auto;
-        left: auto;
+        font-size: 1.4rem;
+        margin: 5px 0 20px 0;
         width: 100%;
         text-align: center;
-        margin: 10px 0 20px 0;
-        font-size: 1.5rem;
-        color: #ffffff;
     }
 
-    /* Navigation Menu */
+    /* Navigation buttons */
     header nav ul {
-        width: 90%;
-        max-width: 300px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 80%;
+        max-width: 280px;
         margin: 0 auto;
         padding: 0;
-        gap: 15px;
     }
 
     header nav ul li {
@@ -754,104 +753,8 @@ header nav ul li a:hover {
     header nav ul li a {
         display: block;
         width: 100%;
-        padding: 12px 20px;
-        margin: 5px 0;
-        font-size: 1.1rem;
+        text-align: center;
+        padding: 12px;
         border-radius: 8px;
-        background-color: rgba(255, 255, 255, 0.9);
-    }
-
-    /* Subtitle (Web Developer | HTML...) */
-    header p {
-        font-size: 1rem;
-        margin: 10px 0 25px 0;
-        padding: 0 15px;
-        color: #ffffff;
-    }
-
-    /* Skills Section */
-    .skill-container {
-        width: 100%;
-        padding: 0 15px;
-    }
-
-    .skill {
-        margin-bottom: 20px;
-    }
-
-    /* Projects Grid */
-    .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 0 15px;
-    }
-
-    .project-card {
-        margin-bottom: 15px;
-    }
-
-    /* Reviews Section */
-    .reviews-container {
-        padding: 0 15px;
-    }
-
-    .review-card {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-
-    /* Contact Section */
-    #contact {
-        padding: 20px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header-content {
-        padding-top: 15px;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .profile-name {
-        font-size: 1.3rem;
-    }
-
-    header nav ul li a {
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
-
-    .skill-container {
-        padding: 0 10px;
-    }
-
-    .project-card {
-        padding: 15px;
-    }
-
-    .review-card {
-        padding: 15px;
-    }
-
-    #about .text-container {
-        padding: 0 15px;
-        font-size: 0.95rem;
-    }
-}
-
-/* Ensure dark mode works properly on mobile */
-@media (max-width: 768px) {
-    body.dark-mode .header-content,
-    body.dark-mode .profile-name,
-    body.dark-mode header nav ul li a {
-        color: #f4f6f7;
-    }
-
-    body.dark-mode header nav ul li a {
-        background-color: #34495e;
-        color: #f4f6f7;
     }
 }
