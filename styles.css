@@ -795,16 +795,6 @@ header nav ul li a:hover {
         color: #3498db;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
-    }
-
-    /* Contact Button Special Style */
-    header nav ul li:last-child a {
-        background: rgba(255, 255, 255, 0.2);
-        color: #ffffff;
-        backdrop-filter: blur(5px);
-        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
-        margin-top: 10px;
-    }
 }
 
 /* Small devices */
