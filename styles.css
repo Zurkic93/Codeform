@@ -715,7 +715,7 @@ header nav ul li a:hover {
         position: absolute;
         width: 90px;
         height: 90px;
-        left: 10px;
+        left: 20px;
         top: 20px;
         margin: 0;
         border: 2px solid #ffffff;
@@ -727,19 +727,33 @@ header nav ul li a:hover {
         margin: 0;
         padding: 0;
         line-height: 1.2;
-        text-align: left;
-        margin-top: 25px;
+        position: absolute;
+        left: 130px;         
+        top: 45px;
     }
 
     /* Subtitle */
     header p {
         width: 100%;
         text-align: center;
-        margin: 25px 0 20px -110px;
+        margin: 130px auto 20px auto;
         padding: 0 15px;
         font-size: 1.1rem;
     }
+/* NEW media query adjustments for smaller screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;   
+        left: 120px;        
+        top: 40px;           
+    }
 
+    .profile-pic {
+        width: 80px;         
+        height: 80px;        
+        left: 15px;          
+    }
+}
     /* Navigation Grid Layout */
     header nav ul {
         display: grid;
