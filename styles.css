@@ -699,3 +699,31 @@ header nav ul li a:hover {
     margin: 0 auto;   /* Center the text block within the container */
     text-align: left; /* Keep text aligned left for readability */
 }
+/* Mobile adjustments for header and profile picture */
+@media (max-width: 768px) {
+    .profile-pic {
+        width: 100px; /* Smaller profile picture */
+        height: 100px;
+        left: 10px;   /* Adjusted left position */
+    }
+    .profile-name {
+        top: 120px;   /* Position adjustment */
+        font-size: 1.2rem;
+        text-align: center;
+        width: 100%;  /* Ensures full width for text */
+    }
+    header h1 {
+        font-size: 2rem; /* Smaller title size for mobile */
+    }
+    header p {
+        font-size: 1rem; /* Smaller subtitle */
+    }
+    header nav ul {
+        flex-direction: column; /* Stack navigation buttons vertically */
+        gap: 10px;
+    }
+    header nav ul li a {
+        font-size: 1rem;
+        padding: 8px 12px; /* Reduce padding for smaller buttons */
+    }
+}
